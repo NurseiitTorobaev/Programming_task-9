@@ -1,0 +1,30 @@
+﻿#include <iostream>
+
+using namespace std;
+
+int main()
+{
+	int n, sum = 0,c=0;
+	int a[100][100];
+	cin >> n;
+	for (int i = 0; i < n; i++)
+	{
+		for (int j = 0; j < n; j++)
+		{
+			cin >> a[i][j];
+		}
+	}
+	for (int i = 0; i < n; i++)
+	{
+		for (int j = 0; j < n; j++)
+		{
+			if (a[i][j] < 0&&a[i][j]%2==0)
+			{
+				sum += a[i][j];
+				c++;
+			}
+		}
+	}
+	cout << c << " "<< sum;
+	return 0;
+}
